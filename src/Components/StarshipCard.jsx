@@ -11,7 +11,7 @@ function StarshipCard({ props }) {
     };
 
 	return (
-		<button onClick={handleClick} className='w-1/6 hover:scale-105 duration-150'>
+		<button onClick={handleClick} className='w-1/6 hover:scale-105 duration-150 min-w-[250px]'>
 			<div className='bg-gray-900 p-3 rounded-md h-36 overflow-auto'>
 				<h1 className='text-white text-xl text-center mb-2'>{props.name}</h1>
 				<p className='text-white'>Model: {props.model}</p>

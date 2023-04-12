@@ -77,13 +77,13 @@ function StarshipContainer() {
 			{/* Loading Spinner */}
 			{loading && <Spinner />}
 			{/* Body */}
-			<div className='mt-10 flex  flex-wrap gap-10 w-full justify-center flex-row'>
+			<div className='my-10 flex  flex-wrap gap-10 w-full justify-center flex-row'>
 				{starShips?.map(starShip => {
 					return <StarshipCard props={starShip} key={starShip.name} />;
 				})}
 			</div>
 			{/* Load More Button */}
-			{!searched && starShips.length !== 0 && (
+			{!searched && starShips.length !== 0 && nextPage && (
 				<div className='flex justify-center my-5'>
 					<button className='bg-gray-900 text-white p-2 rounded-md w-64' onClick={loadMore}>
 						Load More

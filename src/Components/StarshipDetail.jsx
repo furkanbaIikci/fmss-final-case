@@ -29,30 +29,30 @@ function StarshipDetail() {
 	};
 
 	return (
-		<div className='h-screen bg-gray-900'>
+		<div className='h-screen bg-gray-900 '>
 			{/* Loading spinner */}
 			{loading && <Spinner />}
 			<div className='bg-gray-900 flex flex-col justify-center text-center '>
 
                 {/* Starship Details */}
 				<h1 className='text-4xl text-white mt-3'>{starship.name}</h1>
-				<div className='w-1/3 h-[2px] bg-white rounded-md mx-auto my-3'></div>
+				<div className='sm:w-1/3 w-full h-[2px] bg-white rounded-md mx-auto my-3'></div>
 
-				<div className='w-1/6 text-left flex flex-col mx-auto leading-10'>
-					<div className='text-white text-xl'>
-						<span className='font-bold'>Passangers: </span> <span className="font-thin">{starship.passengers}</span>
+				<div className='w-1/6 text-left flex flex-col mx-auto leading-10 min-w-[250px]'>
+					<div className='text-white my-1'>
+						<span className='font-bold text-xl'>Passangers: </span> <span className="font-thin text-lg">{starship.passengers}</span>
+					</div>
+					<div className='text-white my-1'>
+						<span className='font-bold text-xl'>Max Atmospering Speed: </span> <span className="font-thin text-lg">{starship.max_atmosphering_speed}</span>
 					</div>
 					<div className='text-white text-xl'>
-						<span className='font-bold'>Max Atmospering Speed: </span> <span className="font-thin">{starship.max_atmosphering_speed}</span>
+						<span className='font-bold'>Manufacturer: </span> <span className="font-thin text-lg">{starship.manufacturer}</span>
 					</div>
-					<div className='text-white text-xl'>
-						<span className='font-bold'>Manufacturer: </span> <span className="font-thin">{starship.manufacturer}</span>
+					<div className='text-white my-1'>
+						<span className='font-bold text-xl'>Crew: </span> <span className="font-thin text-lg">{starship.crew}</span>
 					</div>
-					<div className='text-white text-xl'>
-						<span className='font-bold'>Crew: </span> <span className="font-thin">{starship.crew}</span>
-					</div>
-					<div className='text-white text-xl'>
-						<span className='font-bold'>Cargo Capacity: </span> <span className="font-thin">{starship.cargo_capacity}</span>
+					<div className='text-white my-1'>
+						<span className='font-bold text-xl'>Cargo Capacity: </span> <span className="font-thin text-lg">{starship.cargo_capacity}</span>
 					</div>
 				</div>
 
