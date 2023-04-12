@@ -9,7 +9,6 @@ function StarshipContainer() {
 	const [defaultStarShips, setDefaultStarShips] = useState([]);
 	const [searchInput, setSearchInput] = useState("");
 	const [nextPage, setNextPage] = useState(null);
-	const [searched, setSearched] = useState(false);
 	const [loading, setLoading] = useState(true);
 
 	/* Sayfa yuklendigi durumda ilk degerlerimizi api'dan cekiyoruz */
@@ -39,7 +38,6 @@ function StarshipContainer() {
 		setLoading(true);
 		if (!searchInput) {
 			setStarShips(defaultStarShips);
-			setSearched(false);
 			setLoading(false);
 		}
 		axios.get(`https://swapi.dev/api/starships/?search=${searchInput}`)
@@ -50,8 +48,13 @@ function StarshipContainer() {
 				}
 				setLoading(true);
 				setStarShips(res.data.results);
-				setSearched(true);
 				setLoading(false);
+				if(res.data.next){
+					setNextPage(res.data.next);
+				}else{
+					setNextPage(null);
+				}
+
 			})
 			.catch(err => {
 				alert("No result found");
@@ -83,7 +86,7 @@ function StarshipContainer() {
 				})}
 			</div>
 			{/* Load More Button */}
-			{!searched && starShips.length !== 0 && nextPage && (
+			{nextPage && starShips.length !== 0 && nextPage && (
 				<div className='flex justify-center my-5'>
 					<button className='bg-gray-900 text-white p-2 rounded-md w-64' onClick={loadMore}>
 						Load More
