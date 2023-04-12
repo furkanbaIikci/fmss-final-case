@@ -1,4 +1,3 @@
-import "../App.css";
 import axios from "axios";
 import Spinner from "./Spinner";
 
@@ -12,7 +11,6 @@ function StarshipContainer() {
 	const [nextPage, setNextPage] = useState(null);
 	const [searched, setSearched] = useState(false);
 	const [loading, setLoading] = useState(true);
-	console.log(loading);
 
 	/* Sayfa yuklendigi durumda ilk degerlerimizi api'dan cekiyoruz */
 	useEffect(() => {

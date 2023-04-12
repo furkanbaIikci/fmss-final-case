@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 
 function App() {
 	return (
-		<div className='App'>
+		<div >
 			<Routes>
 				<Route path='/starship/:id' Component={StarshipDetail} />
 				<Route path='/' Component={StarshipContainer} />
