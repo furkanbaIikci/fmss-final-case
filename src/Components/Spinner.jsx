@@ -1,6 +1,6 @@
 function Spinner() {
 	return (
-		<div role='status' className='absolute -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2 backdrop-blur-md'>
+		<div role='status' className='absolute -translate-x-1/2 -translate-y-1/2 top-2/4 left-1/2 '>
 			<svg
 				aria-hidden='true'
 				className='w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600'
