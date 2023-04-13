@@ -46,7 +46,6 @@ function StarshipContainer() {
 					alert("No result found");
 					return;
 				}
-				setLoading(true);
 				setStarShips(res.data.results);
 				setLoading(false);
 				if(res.data.next){
