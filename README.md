@@ -12,9 +12,9 @@
 # Installation
 ### You can  use npm or pnpm to install the project. 
 
-###- Clone the project
-###- Run `npm install` or `pnpm install` in the project directory
-###- Run `npm run dev` or `pnpm run dev` to start the project
+
+### - Run `npm install` or `pnpm install` in the project directory
+### - Run `npm run dev` or `pnpm run dev` to start the project
 
 # Live Demo
 
