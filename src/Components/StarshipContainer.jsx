@@ -6,7 +6,7 @@ import StarshipCard from "./StarshipCard";
 
 function StarshipContainer() {
 	const [starShips, setStarShips] = useState([]);
-	const [defaultStarShips, setDefaultStarShips] = useState([]);
+	const [defaultStarShips, setDefaultStarShips] = useState([]);  //Arama kisminda deger bos girilirse default degerlerimizi kullanmak icin
 	const [searchInput, setSearchInput] = useState("");
 	const [nextPage, setNextPage] = useState(null);
 	const [loading, setLoading] = useState(true);
@@ -40,7 +40,8 @@ function StarshipContainer() {
 			setStarShips(defaultStarShips);
 			setLoading(false);
 		}
-		axios.get(`https://swapi.dev/api/starships/?search=${searchInput}`)
+		axios
+			.get(`https://swapi.dev/api/starships/?search=${searchInput}`)
 			.then(res => {
 				if (res.data.results.length === 0) {
 					alert("No result found");
@@ -48,12 +49,11 @@ function StarshipContainer() {
 				}
 				setStarShips(res.data.results);
 				setLoading(false);
-				if(res.data.next){
+				if (res.data.next) {
 					setNextPage(res.data.next);
-				}else{
+				} else {
 					setNextPage(null);
 				}
-
 			})
 			.catch(err => {
 				alert("No result found");

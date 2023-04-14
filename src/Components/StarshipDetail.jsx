@@ -61,30 +61,6 @@ function StarshipDetail() {
 						</div>
 					</>
 				)}
-				{/* <table className='text-white table-fixed w-2/3 mx-auto text-xl leading-10'>
-					<tbody>
-						<tr>
-							<td>Passangers</td>
-							<td>{starship.passengers}</td>
-						</tr>
-						<tr>
-							<td>Max Atmospering Speed</td>
-							<td>{starship.max_atmosphering_speed}</td>
-						</tr>
-						<tr>
-							<td>Manufacturer</td>
-							<td>{starship.manufacturer}</td>
-						</tr>
-						<tr>
-							<td>Crew</td>
-							<td>{starship.crew}</td>
-						</tr>
-						<tr>
-							<td>Cargo Capacity</td>
-							<td>{starship.cargo_capacity}</td>
-						</tr>
-					</tbody>
-				</table> */}
 			</div>
 
 			<div>
